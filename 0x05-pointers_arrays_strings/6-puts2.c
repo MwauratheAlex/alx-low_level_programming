@@ -9,9 +9,11 @@
  */
 void puts2(char *str)
 {
-	while (*(str+1) != '\0' && *(str + 2) != '\0')
+	int i = 0;
+
+	while (str[i] != '\0')
 	{
-		_putchar (*str++);
-		*str = *str + 1;
+		if ( (i % 2) == 0)
+			_putchar (str[i++]);
 	}
 }
