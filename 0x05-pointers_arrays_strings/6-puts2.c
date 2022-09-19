@@ -9,15 +9,14 @@
  */
 void puts2(char *str)
 {
-	while (true)
+	while (1)
 	{
 		if (*str + 1 == '\0')
 			break;
 
 		_putchar (*str++);
 
-		if (*str + 1 == '\0')
+		if (*str++ + 1 == '\0')
 			break;
-		*str++;
 	}
 }
