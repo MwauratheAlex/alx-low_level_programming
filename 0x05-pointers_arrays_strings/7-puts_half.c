@@ -12,9 +12,9 @@ void puts_half(char *str)
 	int i, n, t;
 
 	i = 0;
-	t = *str
+	t = *str;
 
-	while (*s++ != '\0')
+	while (*str++ != '\0')
 		i++;
 
 	*s = t
