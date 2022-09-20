@@ -11,13 +11,9 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	char *buffer = src;
-
 	while (*src != '\0')
 		*dest++ = *src++;
 
-	while (*buffer != '\0')
-		_putchar(*buffer++);
 
 	*(dest) = '\0';
 
