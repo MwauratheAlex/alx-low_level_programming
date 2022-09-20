@@ -2,7 +2,7 @@
 
 int main (void)
 {
-	char *str = "0123456789";
+	char *str = "0123456";
 
 	int stringsize = 0;
 
@@ -13,7 +13,7 @@ int main (void)
 
 	printf ("stringsize: %d\n", stringsize);
 
-	int n = (stringsize % 2 == 0) ? stringsize / 2 : (stringsize - 1) / 2;
+	int n = (stringsize % 2 == 0) ? stringsize / 2 : (stringsize + 1) / 2;
 
 	printf ("n: %d\n", n);
 
