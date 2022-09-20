@@ -9,7 +9,7 @@
  */
 void puts_half(char *str)
 {
-	int stinglen = (sizeof(str) / sizeof(str[0])) + 2;
+	int strlen = (sizeof(str) / sizeof(str[0])) + 2;
 
 	int n = (strlen % 2 == 0) ? strlen / 2 : (strlen - 1) / 2;
 
