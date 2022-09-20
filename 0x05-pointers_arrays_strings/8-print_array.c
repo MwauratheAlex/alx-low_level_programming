@@ -11,6 +11,8 @@
  */
 void print_array(int *a, int n)
 {
-	while (n-- != 0)
-		_putchar (*a++);
+	int i;
+
+	for (i = 0; i < n; i++)
+		_putchar (a[i]);
 }
