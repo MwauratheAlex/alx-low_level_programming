@@ -19,9 +19,6 @@ char *_strcpy(char *dest, char *src)
 	while (*buffer != '\0')
 		_putchar(*buffer++);
 
-	_putchar('\n');
-
-
 	*(dest) = '\0';
 
 	return (dest);
