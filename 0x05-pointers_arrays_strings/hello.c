@@ -3,13 +3,12 @@
 int main (void)
 {
 	int array[5];
-	array[0] = 0;
-	array[1] = 1;
-	array[2] = 2;
-	array[3] = 3;
-	array[4] = 4;
-	array[5] = 5;
-
+	array[0] = 98;
+	array[1] = 402;
+	array[2] = -198;
+	array[3] = 298;
+	array[4] = -1024;
+	
 	int n = 2;
 	int i;
 
