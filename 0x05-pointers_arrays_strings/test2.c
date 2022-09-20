@@ -4,7 +4,12 @@ int main (void)
 {
 	char *str = "0123456789";
 
-	int stringsize = sizeof(str) / sizeof(str[0]) + 2;
+	int stringsize = 0;
+
+	char *buffer = str;
+
+	while (*buffer++ != '\0')
+		stringsize ++;
 
 	printf ("stringsize: %d\n", stringsize);
 
