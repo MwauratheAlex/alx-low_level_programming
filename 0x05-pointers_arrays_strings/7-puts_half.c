@@ -9,16 +9,10 @@
  */
 void puts_half(char *str)
 {
-	char *buffer = *str;
+	int stinglen = (sizeof(str) / sizeof(str[0])) + 2;
 
-	int strlen = 0;
+	int n = (strlen % 2 == 0) ? strlen / 2 : (strlen - 1) / 2;
 
-	int n;
-
-	while (*buffer++ != '\0')
-		strlen++;
-
-	n = (strlen % 2 == 0) ? strlen / 2 : (strlen - 1) / 2;
 	for (n; n < strlen; n++)
-		_putchar (str[n]);
+		_putchar (*str + n);
 }
