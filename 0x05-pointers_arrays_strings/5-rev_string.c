@@ -1,9 +1,14 @@
-#include <stdio.h>
+#include "main.h"
 
-int main (void)
+/**
+ * rev_string - reverses a string
+ *
+ * @s: Pointer to the string
+ *
+ * Return: 0
+ */
+void rev_string(char *s)
 {
-	char s[10] = "12345";
-
 	int len, i;
 	char *begin_ptr, *end_ptr, ch;
 
@@ -16,8 +21,7 @@ int main (void)
 
 	end_ptr = end_ptr - 2;
 
-	
-	for (i = 0; i < len / 2; i++)
+	for (i = 0, i < len / 2; i++)
 	{
 		ch = *end_ptr;
 		*end_ptr = *begin_ptr;
@@ -26,8 +30,4 @@ int main (void)
 		end_ptr--;
 		begin_ptr++;
 	}
-
-
-
-	printf("%s",s);
 }
