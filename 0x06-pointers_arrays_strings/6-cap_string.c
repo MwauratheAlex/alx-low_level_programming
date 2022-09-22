@@ -9,7 +9,7 @@
  */
 char *cap_string(char *str)
 {
-	int i = 0,j = 0;
+	int i = 0, j = 0;
 
 	char *sep = " \t\n,;.!?\"(){}";
 
