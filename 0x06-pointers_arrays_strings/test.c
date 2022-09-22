@@ -1,38 +1,36 @@
 #include <stdio.h>
-void print_array(int *a, int n)
-{
-    int i;
 
-    i = 0;
-    while (i < n)
-    {
-        if (i != 0)
-        {
-            printf(", ");
-        }
-        printf("%d", a[i]);
-        i++;
-    }
-    printf("\n");
+char *cap_string(char *str)
+{
+	int j,i = 0;
+	
+
+	char *sep = " \t\n,:.!?\"(){}";
+
+	while (str[i] != '\0')
+	{
+		j = 0;
+		while(sep[j] != '\0')
+		{
+			if (str[i] == sep[j] && str[i+1] >= 'a' && str[i+1] <= 'z') 
+				str[i+1] -= 32;
+			j++;
+		}
+		i++;
+	}
+
+	return (str);
 }
+
 int main (void)
 {
-	printf ("z is: %d	", 'z');//97 -> 122
-	printf ("A is: %c\n", 'z'-32);
+	char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
+    char *ptr;
 
-	 char str[] = "Look up!\n";
-	 char *ptr;
-	
-	 int i = 0;
-	 while (str[i] != '\0')
-	 {
-		 if (str[i] >= 97 && str[i] <= 122)
-		 {
-		 	str[i] -= 32;
-		 }
-		 i++;
-	 }
-	 printf ("%s", str);
+    ptr = cap_string(str);
+    printf ("Original: %s\n", str);
+    printf("New: %s\n", ptr);
 
-	return (0);
+
+    return (0);
 }
