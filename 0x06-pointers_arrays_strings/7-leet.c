@@ -31,6 +31,7 @@ char *leet(char *str)
 				str[i] = '1';
 				break;
 		}
+		i++;
 	}
 	return (str);
 }
