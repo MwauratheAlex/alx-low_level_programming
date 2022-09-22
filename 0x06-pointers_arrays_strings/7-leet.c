@@ -9,27 +9,18 @@
  */
 char *leet(char *str)
 {
-	int i = 0;
+	int i = 0,j;
+	char *letters = "aAeEoOtTlL";
+	int numbers[] = {4,4,3,3,0,0,7,7,1,1};
 
 	while (str[i] != '\0')
 	{
-		switch (str[i])
+		j = 0;
+		while (letters[j] != '\0')
 		{
-			case 'a': case 'A':
-				str[i] = '4';
-				break;
-			case 'e': case 'E':
-				str[i] = '3';
-				break;
-			case 'o': case 'O':
-				str[i] = '0';
-				break;
-			case 't': case 'T':
-				str[i] = '7';
-				break;
-			case 'l': case 'L':
-				str[i] = '1';
-				break;
+			if (letters[j] == str[i])
+				str[i] = numbers[j];
+			j++;
 		}
 		i++;
 	}
