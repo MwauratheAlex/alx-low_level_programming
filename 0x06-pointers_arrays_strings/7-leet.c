@@ -9,9 +9,9 @@
  */
 char *leet(char *str)
 {
-	int i = 0,j;
+	int i = 0, j;
 	char *letters = "aAeEoOtTlL";
-	int numbers[] = {4,4,3,3,0,0,7,7,1,1};
+	int numbers[] = {4, 4, 3, 3, 0, 0, 7, 7, 1, 1};
 
 	while (str[i] != '\0')
 	{
