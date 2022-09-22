@@ -11,7 +11,7 @@ char *leet(char *str)
 {
 	int i = 0, j;
 	char *letters = "aAeEoOtTlL";
-	char *numbers = "4433007711};
+	char *numbers = "4433007711";
 
 	while (str[i] != '\0')
 	{
