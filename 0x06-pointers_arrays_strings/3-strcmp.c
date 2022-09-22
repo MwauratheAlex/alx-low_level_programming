@@ -7,7 +7,7 @@
  *
  * @s2: pointer to second string
  *
- * Return: 0 if s1 == s2, -1 if s1 < s2, 1 if 21 > s2
+ * Return: 0 if s1 == s2, else return s1 - s2
  */
 int _strcmp(char *s1, char *s2)
 {
