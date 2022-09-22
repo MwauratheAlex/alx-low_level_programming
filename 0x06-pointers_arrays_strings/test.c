@@ -1,29 +1,35 @@
 #include <stdio.h>
 
-char *leet(char *str)
+char *cap_string(char *str)
 {
 	int i = 0, j;
-	char *letters = "aAeEoOtTlL";
-	char *numbers = "4433007711";
+
+	char *sep = " \t\n,;.!?\"(){}";
 
 	while (str[i] != '\0')
 	{
 		j = 0;
-		while (letters[j] != '\0')
+
+		while (sep[j] != '\0')
 		{
-			if (letters[j] == str[i])
-				str[i] = numbers[j];
+			if (str[i] == sep[j] && str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				str[i + 1] -= 32;
 			j++;
 		}
 		i++;
 	}
+
 	return (str);
 }
 
 int main (void)
 {
-	char s[] = "aAeEoOtTlL";
-	char *p = leet(s);
-	printf("%s", s);
-    return (0);
+	char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
+    char *ptr;
+
+    ptr = cap_string(str);
+    printf("%s", ptr);
+    printf("%s", str);
+
+    return 0;
 }
