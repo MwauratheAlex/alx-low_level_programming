@@ -9,7 +9,7 @@
  *
  * Return: A pointer to the resulting destination string
  */
-char *_strncat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	char *dest_ptr = *dest, *src_ptr = *src;
 
