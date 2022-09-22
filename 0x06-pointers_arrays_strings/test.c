@@ -17,27 +17,22 @@ void print_array(int *a, int n)
 }
 int main (void)
 {
-	int n;
-	int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
+	printf ("z is: %d	", 'z');//97 -> 122
+	printf ("A is: %c\n", 'z'-32);
 
-	n = sizeof(a) / sizeof(int);
-
-	print_array(a, n);
-
-
-	int x = 0;
-	int y = n - 1;
-	int tmp;
-
-	while (x < y)
-	{
-		tmp = a[x];
-		a[x] = a[y];
-		a[y] = tmp;
-		x++;
-		y--;
-	}
-	print_array(a,n);
+	 char str[] = "Look up!\n";
+	 char *ptr;
+	
+	 int i = 0;
+	 while (str[i] != '\0')
+	 {
+		 if (str[i] >= 97 && str[i] <= 122)
+		 {
+		 	str[i] -= 32;
+		 }
+		 i++;
+	 }
+	 printf ("%s", str);
 
 	return (0);
 }
