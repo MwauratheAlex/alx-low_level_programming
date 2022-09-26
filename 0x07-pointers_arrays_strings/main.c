@@ -9,7 +9,7 @@ int main(void)
 {
 	char *s = "hello";
 	char *f;
-	f = _strchr(s, 'o');
+	f = _strchr(s, 'n');
 
 	if (f != NULL)
 	{
