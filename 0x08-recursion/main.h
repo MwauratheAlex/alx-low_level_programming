@@ -10,5 +10,6 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int _putchar(char c);
 int _sqrt_wrapper(int n, int guess);
+int is_prime_number_wrapper(int n, int divisor);
 
 #endif /* MAIN_H */
