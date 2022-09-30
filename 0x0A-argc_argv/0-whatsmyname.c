@@ -2,14 +2,17 @@
 
 /**
  * main - prints program name, followed by a new line
- * @argc: int
- * @argv: list
+ *
+ * @argc: arguement count
+ *
+ * @argv: arguement vector
+ *
  * Return: 0
  */
 
-int main(int argc, char const *argv[])
+int main(int argc __attribute__((unused)), char const *argv[])
 {
-	(void)argc;
 	printf("%s\n", argv[0]);
+
 	return (0);
 }
