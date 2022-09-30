@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - prints program name, followed by a new line
@@ -10,9 +10,10 @@
  * Return: 0
  */
 
-int main(int argc __attribute__((unused)), char const *argv[])
+int main(int argc, char *argv[])
 {
 	print_str(argv[0]);
+	(void)argc;
 
 	return (0);
 }
