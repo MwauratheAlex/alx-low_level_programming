@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 	len = i;
 	for (i = 0; s2[i] != '\0'; i++)
 		continue;
-	len += i;
+	len += (i + 1);
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
