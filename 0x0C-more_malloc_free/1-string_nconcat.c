@@ -18,19 +18,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j, len, len2 = 0;
 	char *p;
 
-	for (i = 0; s2[i] != '\0'; i++)
-		len2++;
-
-	if (n >= len2)
-		n = len2;
-
 	if (s1 == NULL)
 		s1 = "";
+
 	if (s2 == NULL)
 	{
 		s2 = "";
 		n = 0;
 	}
+
+	for (i = 0; s2[i] != '\0'; i++)
+		len2++;
+
+	if (n >= len2)
+		n = len2;
 
 	len = n + 1;
 
