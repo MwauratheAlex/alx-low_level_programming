@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * str_len - find the lenth of a string
@@ -51,9 +52,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog->owner == NULL)
 		return (NULL);
 
-	dog->name = name;
+	strcpy(dog->name, name);
 	dog->age = age;
-	dog->owner = owner;
+	strcpy(dog->owner, owner);
 
 	return (dog);
 }
