@@ -40,6 +40,6 @@ int main(int argc, char **argv)
 	}
 
 	result = fun_ptr(first, second);
-	printf("result: %d\n", result);
+	printf("%d\n", result);
 	return (0);
 }
