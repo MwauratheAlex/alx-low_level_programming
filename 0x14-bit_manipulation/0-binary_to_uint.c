@@ -12,9 +12,12 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i = 0, j = 0, len;
 
+	if (!b)
+		return (0);
+
 	for (len = 0; b[len]; len++)
 	{
-		if ((b[len] != '1' && b[len] != '0') || !b[len])
+		if ((b[len] != '1' && b[len] != '0'))
 			return (0);
 	}
 
