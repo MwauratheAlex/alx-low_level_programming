@@ -16,7 +16,10 @@ int main(void)
 			putchar(i + '0');
 			putchar(j + '0');
 			if (i == 8 && j == 9)
+			{
+				putchar('\n');
 				break;
+			}
 			putchar(',');
 			putchar(' ');
 		}
