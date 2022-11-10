@@ -90,7 +90,7 @@ int open_to_check_99(char *file, mode_t perm, int fd_from)
 
 	if (open_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s", file);
 		close(fd_from);
 		exit(99);
 	}
