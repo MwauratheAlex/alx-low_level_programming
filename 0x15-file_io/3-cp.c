@@ -74,19 +74,16 @@ int open_from_check_98(char *file)
  *
  * Return: length of read file
  */
-int read_from_check_98(int fd_to, int fd_from, char *buffer, char *file)
+void check_98(int check, int fd_to, int fd_from, char *file)
 {
-	int rd = read(fd_from, buffer, 1024);
 
-	if (rd == -1)
+	if (check == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
 		close(fd_from);
 		close(fd_to);
 		exit(98);
 	}
-
-	return (rd);
 }
 
 /**
@@ -144,14 +141,7 @@ int main(int argc, char **argv)
 	while (len_r == 1024)
 	{
 		len_r = read(fd_from, buffer, 1024);
-		if (len_r == -1)
-		{
-			/* print error */
-			close(fd_from);
-			close(fd_to);
-			exit(98);
-		}
-
+		check_98(len_r, fd_to, fd_from, argv[1]);
 
 		len_w = write(fd_to, buffer, len_r);
 
