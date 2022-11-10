@@ -8,22 +8,21 @@
  */
 int main(void)
 {
-	long i = 1;
-	long j = 2;
-	long k = i + j;
-
-	printf("%lu, %lu, ", i, j);
+	unsigned long i = 1;
+	unsigned long j = 2;
+	unsigned long k = i + j;
+	unsigned long sum = 2;
 
 	while (k <= 4000000)
 	{
 		if (k % 2 == 0)
-			printf("%lu, ", k);
+			sum += k;
 		i = j;
 		j = k;
 		k = i + j;
 	}
 
-	printf("%lu\n", k);
+	printf("%lu\n", sum);
 
 	return (0);
 }
