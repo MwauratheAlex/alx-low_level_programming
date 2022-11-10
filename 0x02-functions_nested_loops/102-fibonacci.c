@@ -11,7 +11,7 @@ int main(void)
 	long i = 1;
 	long j = 2;
 	long k = i + j;
-	int count = 2;
+	int count = 3;
 
 	printf("%lu, %lu, ", i, j);
 
