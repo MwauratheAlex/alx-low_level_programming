@@ -41,30 +41,10 @@ void check_argc_97(int argc)
 }
 
 /**
- * open_from_check_98 - opens a file and checks for errors
- * exit(98) if error
+ * check_98 - exits on error and prints appropriate message
+ * to std error, also closes open files
  *
- * @file: name of file to open
- *
- * Return: file descriptor of opened file
- */
-int open_from_check_98(char *file)
-{
-	int open_from = open(file, O_RDONLY);
-
-	if (open_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
-		exit(98);
-	}
-	return (open_from);
-}
-
-/**
- * read_from_check_98 - reads a file
- * exit(98) on error
- *
- * @buffer: points to the buffer that holds read characters
+ * @check: value being checked to decide if the error is there
  *
  * @fd_from: file descriptor of file to read
  *
@@ -72,16 +52,22 @@ int open_from_check_98(char *file)
  *
  * @file: name of file to read from
  *
+ * @cl: if cl == 1; open files are closed, else,
+ * only the error is printed
+ *
  * Return: length of read file
  */
-void check_98(int check, int fd_to, int fd_from, char *file)
+void check_98(int check, int fd_to, int fd_from, char *file, int cl)
 {
 
 	if (check == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
-		close(fd_from);
-		close(fd_to);
+		if (cl == 1)
+		{
+			close(fd_from);
+			close(fd_to);
+		}
 		exit(98);
 	}
 }
@@ -130,8 +116,8 @@ int main(int argc, char **argv)
 
 	check_argc_97(argc);
 
-	fd_from = open_from_check_98(argv[1]);
-
+	fd_from = open(argv[1], O_RDONLY);
+	check_98(0, 0, fd_from, argv[1], 0);
 	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	fd_to = open_to_check_99(argv[2], file_perm, fd_from);
@@ -141,7 +127,7 @@ int main(int argc, char **argv)
 	while (len_r == 1024)
 	{
 		len_r = read(fd_from, buffer, 1024);
-		check_98(len_r, fd_to, fd_from, argv[1]);
+		check_98(len_r, fd_to, fd_from, argv[1], 1);
 
 		len_w = write(fd_to, buffer, len_r);
 
