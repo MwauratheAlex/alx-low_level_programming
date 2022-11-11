@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * fibonnachi_98 - print first 98 fibonnachi characters
  *
  * Return: nothing
  */
-void fibonnachi_98()
+void fibonnachi_98(void)
 {
 	unsigned long i = 1;
 	unsigned long j = 2;
@@ -22,7 +23,7 @@ void fibonnachi_98()
 		k = i + j;
 		count++;
 	}
-	fibonnachi_93_98(i, j, count);
+	fibonnachi_93_98(i, j);
 }
 
 /**
@@ -35,9 +36,10 @@ void fibonnachi_98()
  * Return: nothing
  */
 
-void fibonnachi_93_98(int i, int j, int count)
+void fibonnachi_93_98(unsigned long i, unsigned long j)
 {
-	unsigned long i_1, i_2, j_1, j_2, k_1, k_2;
+	unsigned long i_1, i_2, j_1, j_2, k_1, k_2, count;
+
 	i_1 = i / 10000000000;
 	i_2 = i % 10000000000;
 
@@ -77,7 +79,6 @@ int main(void)
 	fibonnachi_98();
 	printf("\n");
 
-	
 	return (0);
 }
 

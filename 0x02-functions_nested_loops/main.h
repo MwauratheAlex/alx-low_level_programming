@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+void fibonnachi_93_98(unsigned long i, unsigned long j);
 void print_times_table(int n);
 int _putchar(char c);
 void print_alphabet(void);
