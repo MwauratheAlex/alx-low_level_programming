@@ -21,11 +21,11 @@ void print_times_table(int n)
 			if (j != 0)
 			{
 				if (product < 10)
-					printf("   ,");
+					printf(",   ");
 				else if (product < 100)
-					printf("  ,");
+					printf(",  ");
 				else
-					printf(" ,");
+					printf(", ");
 			}
 			printf("%d", product);
 		}
