@@ -17,7 +17,7 @@ int main(void)
 
 	while (count < 98)
 	{
-		if (i >= 93)
+		if (count >= 93)
 			printf("%lu%lu, ", (k / 10000000000), (k % 10000000000));
 		else
 			printf("%lu, ", k);
