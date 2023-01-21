@@ -9,5 +9,5 @@ os.system("git add .")
 os.system('git commit -m "{}"'.format(commit_message))
 os.system("git push")
 
-print("Pushed with message: {}".format(commit_message))
+print("\n\nPushed with message: {}".format(commit_message))
 
