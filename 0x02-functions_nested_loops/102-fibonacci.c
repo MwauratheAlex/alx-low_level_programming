@@ -14,10 +14,10 @@ int main(void)
 
 	printf("%lu, %lu,", prev, curr);
 
-	for (i = 3; i < 50; i++)
+	for (i = 3; i <= 50; i++)
 	{
 		sum = prev + curr;
-		if (i != 49)
+		if (i != 50)
 			printf(" %lu,", sum);
 		else
 			printf(" %lu\n", sum);
