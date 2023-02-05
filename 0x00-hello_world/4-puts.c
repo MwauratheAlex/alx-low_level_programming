@@ -9,7 +9,6 @@
  */
 int main(void)
 {
-	puts("with proper grammar, but the outcome is a piece of art,");
-	puts("\n");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
