@@ -36,8 +36,8 @@ void print_buffer(char *b, int size)
 		i += 2;
 	}
 	k = i;
-	for (; i % 10 != 0; i += 2)
-		printf("     ");
+	for (; i % 10 != 0; i ++)
+		;
 	for (j = i - 10; j < k; j++)
 	{
 		if (isprint(b[j]))
