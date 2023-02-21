@@ -2,6 +2,8 @@
 #define MAIN_H
 
 #include <stdio.h>
+#include <stddef.h>
+#include <string.h>
 
 int _putchar(char c);
 char *_strncat(char *dest, char *src, int n);
@@ -14,5 +16,6 @@ char *cap_string(char *);
 char *leet(char *);
 void print_number(int n);
 char *rot13(char *s);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 
 #endif /* MAIN_H */
