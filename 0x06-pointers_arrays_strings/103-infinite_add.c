@@ -1,6 +1,27 @@
 #include "main.h"
 
 /**
+ * remove_leading_zeros - removes leading zeros from a sting
+ *
+ * @str: string
+ *
+ * Return: nothing
+ */
+void remove_leading_zeros(char *str)
+{
+	int i, j;
+
+	for (i = 0; str[i] == '0'; i++)
+		;
+
+	for (j = 0; str[i]; i++, j++)
+		str[j] = str[i];
+
+	str[j] = '\0';
+}
+
+
+/**
  * infinite_add - adds two numbers
  *
  * @n1: number
@@ -30,10 +51,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	size_r--;
 	if (len_n1 >= size_r || len_n2 >= size_r)
 		return (0);
-
 	r[size_r] = '\0';
 	size_r--;
-
 	for (i = size_r; i >= 0; i--)
 	{
 		if (len_n1 < 0 && len_n2 < 0)
@@ -60,5 +79,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	if (carry != 0)
 		return (0);
+	remove_leading_zeros(r);
 	return (r);
 }
