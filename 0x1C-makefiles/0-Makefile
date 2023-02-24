@@ -2,8 +2,11 @@
 
 all: school
 
-school: school.o
-	gcc school.o -o school
+school: main.o school.o
+	gcc main.o school.o -o school
+
+main.o: main.c
+	gcc -c main.c
 
 school.o: school.c
 	gcc -c school.c
