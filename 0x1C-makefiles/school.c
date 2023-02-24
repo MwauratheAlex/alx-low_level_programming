@@ -1,7 +1,5 @@
 #include <stdio.h>
-int main(void)
+void school(void)
 {
 	printf("school\n");
-
-	return (0);
 }
