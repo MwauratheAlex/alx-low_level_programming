@@ -11,5 +11,6 @@ int is_prime_number(int n);
 int _putchar(char c);
 int _sqrt_wrapper(int n, int guess);
 int is_prime_number_wrapper(int n, int divisor);
+int is_palindrome(char *s);
 
 #endif /* MAIN_H */
