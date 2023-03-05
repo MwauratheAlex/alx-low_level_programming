@@ -1,3 +1,16 @@
+#include <string.h>
+
+int is_palindrome_wrapper(char *s, int len, int i)
+{
+	if (s[i] != s[(len - 1) - i])
+		return (0);
+
+	if (i == (len / 2) - 1)
+		return (1);
+
+	return (is_palindrome_wrapper(s, len, i + 1));
+}
+
 /**
  * is_palindrome - checks if a string is a palindrome
  *
@@ -7,15 +20,10 @@
  */
 int is_palindrome(char *s)
 {
-	int len = 0;
-	int i;
+	int len = strlen(s);
 
-	for (len = 0; s[len] != '\0'; len++)
-		;
+	if (len == 0)
+		return(1);
 
-	for (i = 0; i < len / 2; i++)
-		if (s[i] != s[(len - 1) - i])
-			return (0);
-
-	return (1);
+	return (is_palindrome_wrapper(s, len, 0));
 }

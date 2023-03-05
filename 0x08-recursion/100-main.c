@@ -14,7 +14,7 @@ int main(void)
     printf("%d\n", r);
     r = is_palindrome("redder");
     printf("%d\n", r);
-    r = is_palindrome("test");
+    r = is_palindrome("");
     printf("%d\n", r);
     r = is_palindrome("step on no pets");
     printf("%d\n", r);
