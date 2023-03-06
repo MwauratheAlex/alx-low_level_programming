@@ -46,9 +46,7 @@ char **strtow(char *str)
 
 	if (str == NULL)
 		return (NULL);
-
 	no_of_words = get_no_of_words(str);
-
 	if (no_of_words == 0)
 		return (NULL);
 
