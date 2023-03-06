@@ -9,7 +9,6 @@
  *
  * Return: number of words in s
  */
-
 int get_no_of_words(char *s)
 {
 	int i;
@@ -24,6 +23,25 @@ int get_no_of_words(char *s)
 	}
 
 	return (no_of_words);
+}
+
+/**
+ * get_word_len - gets the length of a word
+ *
+ * @start: start of the word
+ *
+ * Return: lenght of the word
+ */
+int get_word_len(char *start)
+{
+	int len = 0;
+
+	while (*start != ' ')
+	{
+		len++;
+		start++;
+	}
+	return (len);
 }
 
 /**
@@ -55,15 +73,15 @@ char **strtow(char *str)
 		return (NULL);
 
 	words = malloc(sizeof(char *) * (no_of_words + 1));
+
 	words[no_of_words] = NULL;
 
 	for (k = 0; k < no_of_words; k++)
 	{
 		while (str[i] == ' ')
 			i++;
-		word_len = 0;
-		for (j = i; str[j] != ' '; j++)
-			word_len++;
+
+		word_len = get_word_len(&str[i]);
 
 		words[k] = malloc(sizeof(char) * word_len);
 		j = 0;
