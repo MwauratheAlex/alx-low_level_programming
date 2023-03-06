@@ -1,4 +1,5 @@
 #include "main.h"
+#include "string.h"
 
 /**
  * get_no_of_words - returns the number of words in a string
@@ -43,7 +44,7 @@ char **strtow(char *str)
 	int j = 0;
 	int k;
 
-	if (str == NULL)
+	if (str == NULL || strcmp(str, " ") == 0)
 		return (NULL);
 
 	no_of_words = get_no_of_words(str);
