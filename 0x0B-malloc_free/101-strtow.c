@@ -31,7 +31,7 @@ int get_word_len(char *start)
 {
 	int len = 0;
 
-	while (*start != ' ')
+	while (*start != '\0' && *start != ' ')
 	{
 		len++;
 		start++;
