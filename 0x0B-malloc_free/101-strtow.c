@@ -67,8 +67,7 @@ char **strtow(char *str)
 	if (no_of_words == 0)
 		return (NULL);
 
-	words = (char **)malloc(sizeof(char *) * (no_of_words + 1));
-
+	words = malloc(sizeof(char *) * (no_of_words + 1));
 	words[no_of_words] = NULL;
 
 	for (k = 0; k < no_of_words; k++)
@@ -76,13 +75,9 @@ char **strtow(char *str)
 		while (str[i] == ' ')
 			i++;
 
-		/*word_len = get_word_len(&str[i]);*/
-		word_len = 0;
-		for (j = i; str[j] != ' '&& str[j] != '\0'; j++)
-			word_len++;
+		word_len = get_word_len(&str[i]);
 
-		printf("[%d]\n", word_len);
-		words[k] = malloc(sizeof(char) * (word_len + 1));
+		*(words + k) = (char *)malloc(sizeof(char) * (word_len + 1));
 		j = 0;
 		while (str[i] != ' ')
 		{
