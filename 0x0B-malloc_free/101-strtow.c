@@ -54,7 +54,7 @@ char **strtow(char *str)
 	if (words == NULL)
 		return (NULL);
 
-	words[no_of_words - 1] = NULL;
+	words[no_of_words] = NULL;
 	i = 0;
 
 	for (k = 0; k < no_of_words - 1; k++)
