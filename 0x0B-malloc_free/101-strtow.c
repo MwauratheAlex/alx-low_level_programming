@@ -19,6 +19,8 @@ int get_no_of_words(char *s)
 	{
 		if (s[i] == ' ' && s[i + 1] != ' ' && s[i + 1] != '\0')
 			no_of_words++;
+		if (i == 0 && s[i] != ' ')
+			no_of_words++;
 	}
 
 	return (no_of_words);
@@ -53,7 +55,6 @@ char **strtow(char *str)
 		return (NULL);
 
 	words = malloc(sizeof(char *) * (no_of_words + 1));
-
 	words[no_of_words] = NULL;
 
 	for (k = 0; k < no_of_words; k++)
