@@ -13,7 +13,7 @@ int get_no_of_words(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == ' ' && s[i + 1] != ' ')
+		if (s[i] == ' ' && s[i + 1] != ' ' && s[i + 1] != '\0')
 			no_of_words++;
 		if (i == 0 && s[i] != ' ')
 			no_of_words++;
