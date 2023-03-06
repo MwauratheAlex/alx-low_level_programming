@@ -12,7 +12,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int cents, no_of_coins = 0;
+	int cents, i, no_of_coins = 0;
+	int coins[] = {25, 10, 5, 2};
 
 	if (argc != 2)
 	{
@@ -28,10 +29,10 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	no_of_coins += get_no_of_coins(&cents, 25);
-	no_of_coins += get_no_of_coins(&cents, 10);
-	no_of_coins += get_no_of_coins(&cents, 5);
-	no_of_coins += get_no_of_coins(&cents, 2);
+
+	for (i = 0; i < 4; i++)
+		no_of_coins += get_no_of_coins(&cents, coins[i]);
+
 	no_of_coins += cents;
 
 	printf("%d\n", no_of_coins);
