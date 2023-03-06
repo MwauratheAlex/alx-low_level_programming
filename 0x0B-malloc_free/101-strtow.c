@@ -13,7 +13,7 @@ int get_no_of_words(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == ' ' && s[i + 1] != ' ' && s[i + 1] != '\0')
+		if (s[i] == ' ' && s[i + 1] != ' ')
 			no_of_words++;
 		if (i == 0 && s[i] != ' ')
 			no_of_words++;
@@ -31,7 +31,7 @@ int get_word_len(char *start)
 {
 	int len = 0;
 
-	while (*start != ' ' && *start != '\0')
+	while (*start != ' ')
 	{
 		len++;
 		start++;
@@ -77,7 +77,7 @@ char **strtow(char *str)
 
 		word_len = get_word_len(&str[i]);
 
-		*(words + k) = (char *)malloc(sizeof(char) * (word_len + 1));
+		words[k] = (char *)malloc(sizeof(char) * (word_len + 1));
 		j = 0;
 		while (str[i] != ' ')
 		{
