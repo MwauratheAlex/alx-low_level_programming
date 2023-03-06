@@ -44,7 +44,7 @@ char **strtow(char *str)
 	int j = 0;
 	int k;
 
-	if (str == NULL || strcmp(str, " ") == 0)
+	if (str == NULL || strcmp(str, "") == 0 || strcmp(str, " ") == 0)
 		return (NULL);
 
 	no_of_words = get_no_of_words(str);
