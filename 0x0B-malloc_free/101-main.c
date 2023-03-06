@@ -1,38 +1,38 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
+char **strtow(char *);
+
 /**
  * print_tab - Prints an array of string
- * @tab: The array to print
  *
- * Return: nothing
+ * @tab: The array to print
  */
 void print_tab(char **tab)
 {
-    int i;
+	int i;
 
-    for (i = 0; tab[i] != NULL; ++i)
-    {
-        printf("%s\n", tab[i]);
-    }
+	for (i = 0; tab[i] != NULL; ++i)
+	{
+		printf("%s\n", tab[i]);
+	}
 }
 
 /**
- * main - check the code for ALX School students.
+ * main - check the code .
  *
- * Return: 1 if an error occurred, 0 otherwise
+ * Return: Always 0.
  */
 int main(void)
 {
-    char **tab;
+	char **tab;
+	tab = strtow("      ALX School         #cisfun      ");
 
-    tab = strtow("      ALX School         #cisfun      ");
-    if (tab == NULL)
-    {
-        printf("Failed\n");
-        return (1);
-    }
-    print_tab(tab);
-    return (0);
+	if (tab == NULL)
+	{
+		printf("Failed\n");
+		return (1);
+	}
+	print_tab(tab);
+	return (0);
 }
