@@ -31,7 +31,7 @@ int get_word_len(char *start)
 {
 	int len = 0;
 
-	while (*start != ' ')
+	while (*start != ' ' && *start != '\0')
 	{
 		len++;
 		start++;
@@ -76,8 +76,12 @@ char **strtow(char *str)
 		while (str[i] == ' ')
 			i++;
 
-		word_len = get_word_len(&str[i]);
+		/*word_len = get_word_len(&str[i]);*/
+		word_len = 0;
+		for (j = i; str[j] != ' '&& str[j] != '\0'; j++)
+			word_len++;
 
+		printf("[%d]\n", word_len);
 		words[k] = malloc(sizeof(char) * (word_len + 1));
 		j = 0;
 		while (str[i] != ' ')
