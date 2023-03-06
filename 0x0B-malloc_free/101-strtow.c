@@ -3,10 +3,7 @@
 
 /**
  * get_no_of_words - returns the number of words in a string
- * where the delimeter = ' '
- *
  * @s: the string
- *
  * Return: number of words in s
  */
 int get_no_of_words(char *s)
@@ -27,9 +24,7 @@ int get_no_of_words(char *s)
 
 /**
  * get_word_len - gets the length of a word
- *
  * @start: start of the word
- *
  * Return: lenght of the word
  */
 int get_word_len(char *start)
