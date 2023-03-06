@@ -72,7 +72,7 @@ char **strtow(char *str)
 	if (no_of_words == 0)
 		return (NULL);
 
-	words = malloc(sizeof(char *) * (no_of_words + 1));
+	words = (char **)malloc(sizeof(char *) * (no_of_words + 1));
 
 	words[no_of_words] = NULL;
 
