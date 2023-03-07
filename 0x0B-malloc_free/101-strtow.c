@@ -5,6 +5,9 @@
  * get_no_of_words - returns the number of words in a string
  * @s: the string
  * Return: number of words in s
+ *
+ * CAUTION: This code allocates more memory than required
+ * To be corrected.
  */
 int get_no_of_words(char *s)
 {
