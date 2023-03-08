@@ -4,6 +4,10 @@
  * Print the result, followed by a new line
  * Usage: mul num1 num2
  *
+ * @argc: arguement count
+ *
+ * @argv: arguement vector
+ *
  * num1 and num2 will be passed in base 10
  *
  * If the number of arguments is incorrect, print Error,
@@ -16,7 +20,7 @@
  */
 int main(int argc, char **argv)
 {
-	long num1, num2;
+	long num1, num2, product;
 	char *endptr1, *endptr2;
 
 	if (argc != 3)
@@ -34,6 +38,7 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	printf("%ld\n", num1 * num2);
+	product = num1 * num2;
+	printf("%ld\n", product);
 	return (0);
 }
