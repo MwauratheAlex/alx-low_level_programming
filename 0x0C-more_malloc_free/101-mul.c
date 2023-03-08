@@ -17,6 +17,10 @@
  * followed by a new line, and exit with a status of 98
  *
  * Return: 0
+ *
+ * Caution: Multiplication of very large numbers is not implemented
+ * Involves pointer stuff
+ * Might do it later
  */
 int main(int argc, char **argv)
 {
