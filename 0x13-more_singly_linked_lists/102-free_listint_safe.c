@@ -26,7 +26,7 @@ listint_t *get_last_node(listint_t *head)
 	slow = head;
 	while (fast != slow)
 	{
-		prev = slow;
+		prev = fast;
 		slow = slow->next;
 		fast = fast->next;
 	}
