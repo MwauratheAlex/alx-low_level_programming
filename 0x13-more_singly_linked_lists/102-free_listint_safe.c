@@ -45,8 +45,11 @@ size_t free_listint_safe(listint_t **h)
 {
 	size_t nodes = 0;
 	listint_t *head = *h;
-	listint_t *current = NULL;
+	listint_t *current;
 	listint_t *last_node;
+
+	if (h == NULL || *h == NULL)
+		return (nodes);
 
 	last_node = get_last_node(*h);
 	if (last_node)
