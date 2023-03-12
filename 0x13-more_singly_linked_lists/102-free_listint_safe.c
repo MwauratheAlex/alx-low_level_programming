@@ -24,6 +24,8 @@ listint_t *get_last_node(listint_t *head)
 	if (fast->next == NULL || fast->next->next == NULL)
 		return (NULL);
 	slow = head;
+	if (fast == slow)/* list has two elements in a loop */
+		return (fast->next);
 	while (fast != slow)
 	{
 		prev = fast;
